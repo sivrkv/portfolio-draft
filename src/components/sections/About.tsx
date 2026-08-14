@@ -16,7 +16,7 @@ export function About() {
             <UserCheck className="w-4 h-4" />
             <span>Executive Profile</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-100">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)]">
             Pioneering Enterprise AI & Global Digital Transformation
           </h2>
         </div>
@@ -32,7 +32,7 @@ export function About() {
           >
             {PROFILE_DATA.executiveSummary.map((paragraph, index) => (
               <GlassCard key={index} className="p-6 md:p-8">
-                <p className="text-slate-300 text-base md:text-lg leading-relaxed">
+                <p className="text-[var(--text-secondary)] text-base md:text-lg leading-relaxed">
                   {paragraph}
                 </p>
               </GlassCard>
@@ -54,11 +54,11 @@ export function About() {
                   <Globe2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-100 text-lg">Global CXO Trusted Advisor</h3>
-                  <p className="text-xs text-slate-400 font-mono-tech">UK • EU • USA • INDIA</p>
+                  <h3 className="font-bold text-[var(--text-primary)] text-lg">Global CXO Trusted Advisor</h3>
+                  <p className="text-xs text-[var(--text-secondary)] font-mono-tech">UK • EU • USA • INDIA</p>
                 </div>
               </div>
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                 Trusted advisor to C-level executives in top-tier global financial institutions, translating complex business constraints into production-ready AI & automation roadmaps.
               </p>
             </GlassCard>
@@ -70,34 +70,34 @@ export function About() {
                   <BrainCircuit className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-100 text-lg">AI Centre of Excellence</h3>
+                  <h3 className="font-bold text-[var(--text-primary)] text-lg">AI Centre of Excellence</h3>
                   <p className="text-xs text-violet-400 font-mono-tech">GenAI • LLMs • RAG • Agents</p>
                 </div>
               </div>
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                 Spearheaded enterprise AI CoEs establishing coding standards, reusable multi-agent assets, vector search pipelines, and cloud data sovereignty governance.
               </p>
             </GlassCard>
 
             {/* Core Domain Grid */}
             <GlassCard className="p-6">
-              <h4 className="text-xs font-mono-tech uppercase text-slate-400 mb-4 tracking-wider">
+              <h4 className="text-xs font-mono-tech uppercase text-[var(--text-secondary)] mb-4 tracking-wider">
                 Banking & FS Domain Leadership
               </h4>
               <div className="grid grid-cols-2 gap-3 text-xs font-mono-tech font-semibold">
-                <div className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-200 flex items-center space-x-2">
+                <div className="p-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-cyan-400" />
                   <span>Retail & Cards</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-200 flex items-center space-x-2">
+                <div className="p-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-blue-400" />
                   <span>Corporate Banking</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-200 flex items-center space-x-2">
+                <div className="p-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-violet-400" />
                   <span>Payments & Lending</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-200 flex items-center space-x-2">
+                <div className="p-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-purple-400" />
                   <span>Regulatory KYC</span>
                 </div>

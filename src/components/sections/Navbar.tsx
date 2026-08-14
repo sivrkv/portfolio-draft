@@ -43,17 +43,17 @@ export function Navbar() {
           className="flex items-center space-x-2 group focus:outline-none"
         >
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-violet-600 to-cyan-400 p-[1.5px] group-hover:scale-105 transition-transform">
-            <div className="w-full h-full bg-slate-950 rounded-[10.5px] flex items-center justify-center">
+            <div className="w-full h-full bg-[var(--bg-dark)] rounded-[10.5px] flex items-center justify-center">
               <span className="font-mono-tech font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 text-lg">
                 SS
               </span>
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-slate-100 text-base leading-tight group-hover:text-cyan-400 transition-colors">
+            <span className="font-bold text-[var(--text-primary)] text-base leading-tight group-hover:text-cyan-400 transition-colors">
               Dr. Selvaraj S.
             </span>
-            <span className="text-[10px] font-mono-tech text-slate-400 tracking-wider">
+            <span className="text-[10px] font-mono-tech text-[var(--text-secondary)] tracking-wider">
               AI TECH LEADER
             </span>
           </div>
@@ -65,7 +65,7 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-xs uppercase font-mono-tech tracking-wider text-slate-300 hover:text-cyan-400 transition-colors relative py-1 group"
+              className="text-xs uppercase font-mono-tech tracking-wider text-[var(--text-secondary)] hover:text-cyan-400 transition-colors relative py-1 group"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 group-hover:w-full" />
@@ -78,7 +78,7 @@ export function Navbar() {
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
+            className="p-2.5 rounded-xl border border-[var(--border-color)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
             aria-label="Toggle Theme"
           >
             {theme === "dark" ? (
@@ -102,7 +102,7 @@ export function Navbar() {
         <div className="flex sm:hidden items-center space-x-2">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg border border-slate-800 bg-slate-900/60 text-slate-300"
+            className="p-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] text-[var(--text-secondary)]"
             aria-label="Toggle Theme"
           >
             {theme === "dark" ? (
@@ -114,7 +114,7 @@ export function Navbar() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-200 hover:text-white"
+            className="p-2.5 rounded-xl border border-[var(--border-color)] bg-[var(--bg-card)] text-[var(--text-primary)] hover:text-[var(--text-primary)]"
             aria-label="Open Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -129,7 +129,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="sm:hidden glass-nav border-t border-slate-800/80 px-6 py-6"
+            className="sm:hidden glass-nav border-t border-[var(--border-color)]/80 px-6 py-6"
           >
             <div className="flex flex-col space-y-4">
               {NAV_LINKS.map((link, idx) => (
@@ -140,13 +140,13 @@ export function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.04 }}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm font-mono-tech uppercase tracking-wider text-slate-200 hover:text-cyan-400 py-1"
+                  className="text-sm font-mono-tech uppercase tracking-wider text-[var(--text-primary)] hover:text-cyan-400 py-1"
                 >
                   {link.name}
                 </motion.a>
               ))}
 
-              <div className="pt-4 border-t border-slate-800 flex flex-col space-y-3">
+              <div className="pt-4 border-t border-[var(--border-color)] flex flex-col space-y-3">
                 <a
                   href={PROFILE_DATA.contactInfo.resumeUrl}
                   onClick={() => setMobileMenuOpen(false)}

@@ -54,9 +54,9 @@ export function StatCard({ label, value, suffix = "", description }: StatCardPro
           </span>
         )}
       </div>
-      <div className="text-sm font-semibold text-slate-200 mt-1">{label}</div>
+      <div className="text-sm font-semibold text-[var(--text-primary)] mt-1">{label}</div>
       {description && (
-        <div className="text-xs text-slate-400 mt-0.5">{description}</div>
+        <div className="text-xs text-[var(--text-secondary)] mt-0.5">{description}</div>
       )}
     </motion.div>
   );

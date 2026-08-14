@@ -11,47 +11,43 @@ export interface ReelItem {
 export const MEDIA_DATA = {
   sectionTitle: "In Motion",
   sectionSubtitle: "Talks, Keynotes & Executive AI Insights",
-  instagramProfileUrl: "https://www.instagram.com", // User can paste real profile URL
+  instagramProfileUrl: "https://www.instagram.com/shaskool_lift4life/", // User can paste real profile URL
   reels: [
     {
       id: "reel-1",
-      title: "Enterprise GenAI Architecture",
-      subtitle: "Navigating RAG pipelines, data sovereignty, & multi-agent systems for Tier-1 banks.",
+      title: "How GenAI can help for society?",
       // add reel URL here: paste Instagram reel link e.g. "https://www.instagram.com/p/C..."
-      instagramUrl: "", 
+      instagramUrl: "https://www.instagram.com/reel/DGNK7FoTGoS/?igsh=eHN3N3ZycjZsZTJo", 
       videoUrl: "", 
-      thumbnailUrl: "",
-      tags: ["GenAI", "Banking Tech", "Keynote"]
+      thumbnailUrl: "/media/socialcause.png",
+      tags: ["GenAI", "Keynote", "promptengineering", "socialcause "]
     },
     {
       id: "reel-2",
-      title: "Scaling Intelligent Automation",
-      subtitle: "Bridging BPM, RPA, and Agentic AI into high-velocity operational workflows.",
+      title: "The future isn’t AI vs. Humans. It’s AI with Humans.",
       // add reel URL here
-      instagramUrl: "",
+      instagramUrl: "https://www.instagram.com/reels/DGYunCBTDko/",
       videoUrl: "",
-      thumbnailUrl: "",
-      tags: ["Intelligent Automation", "RPA", "BPM"]
+      thumbnailUrl: "/media/AIwithhuman.png",
+      tags: ["AI", "GenAI", "HumanTouch", "Healthcare"]
     },
     {
       id: "reel-3",
-      title: "Upskilling 1000+ Engineers in AI",
-      subtitle: "Building an enterprise AI Centre of Excellence and modernizing engineering culture.",
+      title: "Is GenAI too risky?",
       // add reel URL here
-      instagramUrl: "",
+      instagramUrl: "https://www.instagram.com/reels/DGI2bOzzV0t/",
       videoUrl: "",
-      thumbnailUrl: "",
-      tags: ["Leadership", "Upskilling", "CoE"]
+      thumbnailUrl: "/media/GenAIrisky.png",
+      tags: ["ai", "genai", "risk", "promptengineering"]
     },
     {
       id: "reel-4",
-      title: "Future of Agentic Systems in Financial Services",
-      subtitle: "Autonomous ticket triaging, dispute resolution, and continuous AI governance.",
+      title: "My funny experience with GenAI",  
       // add reel URL here
-      instagramUrl: "",
+      instagramUrl: "https://www.instagram.com/reels/DGFcN_bT690/",
       videoUrl: "",
-      thumbnailUrl: "",
-      tags: ["Agentic AI", "Financial Services", "Strategy"]
+      thumbnailUrl: "/media/funnyexp.png",
+      tags: ["genai", "funny", "promptengineering"]
     }
   ] as ReelItem[]
 };

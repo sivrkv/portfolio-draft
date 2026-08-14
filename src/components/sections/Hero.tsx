@@ -60,9 +60,9 @@ export function Hero() {
             </div>
 
             {/* Name */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-100 mb-3">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[var(--text-primary)] mb-3">
               Dr. Selvaraj Shanmugam{" "}
-              <span className="text-xl sm:text-2xl text-slate-400 font-normal font-mono-tech">
+              <span className="text-xl sm:text-2xl text-[var(--text-secondary)] font-normal font-mono-tech">
                 ({PROFILE_DATA.shortName})
               </span>
             </h1>
@@ -76,7 +76,7 @@ export function Hero() {
             </div>
 
             {/* One-Line Hook */}
-            <p className="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl">
+            <p className="text-[var(--text-secondary)] text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl">
               {PROFILE_DATA.heroHook}
             </p>
 
@@ -92,7 +92,7 @@ export function Hero() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center space-x-2 text-sm font-mono-tech font-semibold text-slate-200 px-6 py-3.5 rounded-xl glass-card hover:text-cyan-400 border border-slate-700/80 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center space-x-2 text-sm font-mono-tech font-semibold text-[var(--text-secondary)] px-6 py-3.5 rounded-xl glass-card hover:text-cyan-400 border border-slate-700/80 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <Download className="w-4 h-4 text-cyan-400" />
                 <span>Download Resume</span>
@@ -113,17 +113,17 @@ export function Hero() {
 
               {/* Hexagonal/Circular Frame Wrapper */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400">
-                <div className="w-full h-full rounded-full bg-slate-950 overflow-hidden relative flex items-center justify-center border-4 border-slate-900 shadow-2xl">
+                <div className="w-full h-full rounded-full bg-[var(--bg-dark)] overflow-hidden relative flex items-center justify-center border-4 border-slate-900 shadow-2xl">
                   {/* Photo Visual / Avatar Graphic */}
                   <div className="w-full h-full bg-gradient-to-b from-slate-900 to-slate-950 flex flex-col items-center justify-center p-6 text-center">
                     <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 mb-3">
-                      <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center">
+                      <div className="w-full h-full rounded-full bg-[var(--bg-dark)] flex items-center justify-center">
                         <Terminal className="w-12 h-12 text-cyan-400" />
                       </div>
                     </div>
-                    <span className="font-bold text-slate-100 text-lg">Dr. Selvaraj S.</span>
+                    <span className="font-bold text-[var(--text-primary)] text-lg">Dr. Selvaraj S.</span>
                     <span className="text-xs text-cyan-400 font-mono-tech mt-1">Ph.D. in Artificial Intelligence</span>
-                    <span className="text-[11px] text-slate-400 mt-1">Global AI Leader • Banking & FS</span>
+                    <span className="text-[11px] text-[var(--text-secondary)] mt-1">Global AI Leader • Banking & FS</span>
                   </div>
                 </div>
               </div>
@@ -132,8 +132,8 @@ export function Hero() {
               <div className="absolute bottom-2 -left-4 glass-card px-3 py-2 rounded-xl flex items-center space-x-2 border border-blue-500/30 shadow-lg">
                 <ShieldCheck className="w-5 h-5 text-cyan-400" />
                 <div className="flex flex-col text-[11px]">
-                  <span className="font-bold text-slate-100">Enterprise GenAI</span>
-                  <span className="text-slate-400 font-mono-tech">CoE Director</span>
+                  <span className="font-bold text-[var(--text-primary)]">Enterprise GenAI</span>
+                  <span className="text-[var(--text-secondary)] font-mono-tech">CoE Director</span>
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ export function Education() {
             <GraduationCap className="w-4 h-4" />
             <span>Academic Credentials</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-100">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)]">
             Education & Academic Excellence
           </h2>
         </div>
@@ -37,20 +37,20 @@ export function Education() {
                     <span className="text-xs font-mono-tech px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
                       {edu.year}
                     </span>
-                    <GraduationCap className="w-5 h-5 text-slate-400" />
+                    <GraduationCap className="w-5 h-5 text-[var(--text-secondary)]" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-100 mb-1">
+                  <h3 className="text-xl font-bold text-[var(--text-primary)] mb-1">
                     {edu.degree}
                   </h3>
                   <p className="text-sm font-semibold text-blue-400 mb-3">
                     {edu.institution}
                   </p>
-                  <p className="text-xs text-slate-400 font-mono-tech mb-4">
+                  <p className="text-xs text-[var(--text-secondary)] font-mono-tech mb-4">
                     {edu.field}
                   </p>
                 </div>
                 {edu.highlight && (
-                  <div className="pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-start space-x-2">
+                  <div className="pt-3 border-t border-[var(--border-color)] text-xs text-[var(--text-secondary)] flex items-start space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                     <span>{edu.highlight}</span>
                   </div>
@@ -71,7 +71,7 @@ export function Education() {
           {PROFILE_DATA.quickBadges.map((badge, idx) => (
             <div
               key={idx}
-              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl glass-card border border-slate-700/80 text-xs font-mono-tech font-bold text-slate-200 shadow-sm hover:border-cyan-400/50 transition-colors"
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl glass-card border border-slate-700/80 text-xs font-mono-tech font-bold text-[var(--text-secondary)] shadow-sm hover:border-cyan-400/50 transition-colors"
             >
               <Award className="w-4 h-4 text-cyan-400" />
               <span>{badge}</span>

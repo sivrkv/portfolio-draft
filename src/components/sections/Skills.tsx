@@ -17,7 +17,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-slate-950/40">
+    <section id="skills" className="py-24 relative overflow-hidden bg-[var(--bg-dark)]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col items-start mb-12">
@@ -25,7 +25,7 @@ export function Skills() {
             <Wrench className="w-4 h-4" />
             <span>Technical Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-100">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)]">
             Skills & Enterprise Expertise
           </h2>
         </div>
@@ -42,11 +42,11 @@ export function Skills() {
             >
               <GlassCard className="h-full p-6 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center space-x-3 mb-5 border-b border-slate-800 pb-4">
-                    <div className="p-2 rounded-xl bg-slate-900 border border-slate-800">
+                  <div className="flex items-center space-x-3 mb-5 border-b border-[var(--border-color)] pb-4">
+                    <div className="p-2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)]">
                       {ICON_MAP[cat.iconName] || <BrainCircuit className="w-5 h-5 text-cyan-400" />}
                     </div>
-                    <h3 className="font-bold text-slate-100 text-lg">
+                    <h3 className="font-bold text-[var(--text-primary)] text-lg">
                       {cat.category}
                     </h3>
                   </div>

@@ -11,7 +11,7 @@ import { ContactFooter } from "@/components/sections/ContactFooter";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0A0A0F] text-slate-100 relative">
+    <main className="min-h-screen bg-[var(--bg-dark)] text-[var(--text-primary)] relative">
       <Navbar />
       <Hero />
       <About />

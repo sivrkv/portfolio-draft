@@ -11,7 +11,7 @@ interface TechPillProps {
 export function TechPill({ label, variant = "primary" }: TechPillProps) {
   const variantStyles = {
     primary:
-      "bg-slate-950/60 dark:bg-slate-900/60 text-slate-200 border-slate-700/60 hover:border-blue-500/50 hover:bg-blue-500/10",
+      "bg-slate-950/60 dark:bg-slate-900/60 text-[var(--text-secondary)] border-slate-700/60 hover:border-blue-500/50 hover:bg-blue-500/10",
     secondary:
       "bg-purple-950/30 dark:bg-purple-900/20 text-purple-200 border-purple-800/40 hover:border-purple-500/60",
     accent:

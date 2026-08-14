@@ -24,7 +24,7 @@ export function Awards() {
             <Trophy className="w-4 h-4" />
             <span>Honors & Recognitions</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-100">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)]">
             Awards & Executive Recognition
           </h2>
         </div>
@@ -40,11 +40,11 @@ export function Awards() {
               transition={{ duration: 0.3, delay: idx * 0.08 }}
             >
               <GlassCard className="h-full flex flex-col items-center text-center p-6 border-t-2 border-t-cyan-400">
-                <div className="p-3 rounded-2xl bg-slate-900 border border-slate-800 mb-4 shadow-inner">
+                <div className="p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] mb-4 shadow-inner">
                   {AWARD_ICONS[item.icon] || <Trophy className="w-8 h-8 text-cyan-400" />}
                 </div>
 
-                <h3 className="font-bold text-slate-100 text-base mb-1">
+                <h3 className="font-bold text-[var(--text-primary)] text-base mb-1">
                   {item.title}
                 </h3>
                 <p className="text-xs text-cyan-400 font-semibold mb-3">
@@ -52,7 +52,7 @@ export function Awards() {
                 </p>
 
                 {item.badge && (
-                  <span className="mt-auto text-[10px] font-mono-tech uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-500/10 text-slate-300 border border-blue-500/20">
+                  <span className="mt-auto text-[10px] font-mono-tech uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-500/10 text-[var(--text-secondary)] border border-blue-500/20">
                     {item.badge}
                   </span>
                 )}

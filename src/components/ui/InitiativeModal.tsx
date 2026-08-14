@@ -37,7 +37,7 @@ export function InitiativeModal({ item, onClose }: InitiativeModalProps) {
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+            className="absolute top-4 right-4 p-2 rounded-full text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card-hover)] transition-colors"
             aria-label="Close modal"
           >
             <X className="w-6 h-6" />
@@ -49,7 +49,7 @@ export function InitiativeModal({ item, onClose }: InitiativeModalProps) {
             <span>{item.category}</span>
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-bold text-slate-100 mb-2">
+          <h3 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-2">
             {item.title}
           </h3>
 
@@ -63,12 +63,12 @@ export function InitiativeModal({ item, onClose }: InitiativeModalProps) {
             {item.impactStats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 text-center"
+                className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-4 text-center"
               >
                 <div className="text-2xl md:text-3xl font-bold font-mono-tech gradient-text">
                   {stat.value}
                 </div>
-                <div className="text-xs text-slate-400 mt-1 font-medium">
+                <div className="text-xs text-[var(--text-secondary)] mt-1 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -77,17 +77,17 @@ export function InitiativeModal({ item, onClose }: InitiativeModalProps) {
 
           {/* Detailed Architecture Breakdown */}
           <div className="mb-6">
-            <h4 className="text-sm uppercase font-mono-tech text-slate-400 mb-2 tracking-wider">
+            <h4 className="text-sm uppercase font-mono-tech text-[var(--text-secondary)] mb-2 tracking-wider">
               Architecture & System Overview
             </h4>
-            <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+            <p className="text-[var(--text-secondary)] leading-relaxed text-sm md:text-base">
               {item.fullDescription}
             </p>
           </div>
 
           {/* Tech Stack */}
           <div>
-            <h4 className="text-sm uppercase font-mono-tech text-slate-400 mb-3 tracking-wider">
+            <h4 className="text-sm uppercase font-mono-tech text-[var(--text-secondary)] mb-3 tracking-wider">
               Technology Stack
             </h4>
             <div className="flex flex-wrap gap-2">

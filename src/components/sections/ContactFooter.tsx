@@ -23,7 +23,7 @@ export function ContactFooter() {
   };
 
   return (
-    <footer id="contact" className="pt-24 pb-12 relative overflow-hidden bg-slate-950">
+    <footer id="contact" className="pt-24 pb-12 relative overflow-hidden bg-[var(--bg-dark)]">
       {/* Glow Orbs background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-96 bg-gradient-to-b from-blue-600/10 via-violet-600/10 to-transparent blur-3xl pointer-events-none" />
 
@@ -35,11 +35,11 @@ export function ContactFooter() {
             <span>Initiate Collaboration</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-100 mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--text-primary)] mb-6 tracking-tight">
             Let&apos;s build something intelligent together.
           </h2>
 
-          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-[var(--text-secondary)] text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
             Whether you are looking to scale an enterprise AI Centre of Excellence, design multi-agent workflows, or modernize core banking platforms — let&apos;s connect.
           </p>
 
@@ -55,23 +55,23 @@ export function ContactFooter() {
           </div>
 
           {/* Quick Contact Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left border-t border-slate-800/80 pt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left border-t border-[var(--border-color)]/80 pt-8">
             {/* Email Card */}
-            <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-4 flex items-center justify-between">
               <div className="flex items-center space-x-3 overflow-hidden">
                 <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="truncate">
-                  <div className="text-[10px] font-mono-tech text-slate-400">EMAIL</div>
-                  <div className="text-xs font-semibold text-slate-200 truncate">
+                  <div className="text-[10px] font-mono-tech text-[var(--text-secondary)]">EMAIL</div>
+                  <div className="text-xs font-semibold text-[var(--text-secondary)] truncate">
                     {PROFILE_DATA.contactInfo.email}
                   </div>
                 </div>
               </div>
               <button
                 onClick={() => copyToClipboard(PROFILE_DATA.contactInfo.email, "email")}
-                className="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-cyan-400 transition-colors"
+                className="p-1.5 rounded-lg hover:bg-[var(--bg-card-hover)] text-[var(--text-secondary)] hover:text-cyan-400 transition-colors"
                 title="Copy Email"
               >
                 {copiedEmail ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
@@ -79,21 +79,21 @@ export function ContactFooter() {
             </div>
 
             {/* Phone Card */}
-            <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-4 flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="p-2 rounded-lg bg-violet-500/10 text-violet-400 shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono-tech text-slate-400">PHONE</div>
-                  <div className="text-xs font-semibold text-slate-200">
+                  <div className="text-[10px] font-mono-tech text-[var(--text-secondary)]">PHONE</div>
+                  <div className="text-xs font-semibold text-[var(--text-secondary)]">
                     {PROFILE_DATA.contactInfo.phone}
                   </div>
                 </div>
               </div>
               <button
                 onClick={() => copyToClipboard(PROFILE_DATA.contactInfo.phone, "phone")}
-                className="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-cyan-400 transition-colors"
+                className="p-1.5 rounded-lg hover:bg-[var(--bg-card-hover)] text-[var(--text-secondary)] hover:text-cyan-400 transition-colors"
                 title="Copy Phone"
               >
                 {copiedPhone ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
@@ -101,13 +101,13 @@ export function ContactFooter() {
             </div>
 
             {/* Location Card */}
-            <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex items-center space-x-3">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-4 flex items-center space-x-3">
               <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-[10px] font-mono-tech text-slate-400">LOCATION</div>
-                <div className="text-xs font-semibold text-slate-200">
+                <div className="text-[10px] font-mono-tech text-[var(--text-secondary)]">LOCATION</div>
+                <div className="text-xs font-semibold text-[var(--text-secondary)]">
                   {PROFILE_DATA.contactInfo.location}
                 </div>
               </div>
@@ -116,7 +116,7 @@ export function ContactFooter() {
         </div>
 
         {/* Footer Sub-Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-slate-800/60 text-xs text-slate-400 font-mono-tech gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-[var(--border-color)]/60 text-xs text-[var(--text-secondary)] font-mono-tech gap-4">
           <div>
             © {new Date().getFullYear()} Dr. Selvaraj Shanmugam. All rights reserved.
           </div>
@@ -127,7 +127,7 @@ export function ContactFooter() {
               href={PROFILE_DATA.contactInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+              className="p-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="w-4 h-4" />
@@ -136,7 +136,7 @@ export function ContactFooter() {
               href={PROFILE_DATA.contactInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+              className="p-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
               aria-label="GitHub"
             >
               <GithubIcon className="w-4 h-4" />

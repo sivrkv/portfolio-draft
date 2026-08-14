@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Play, Video, ExternalLink } from "lucide-react";
 import { MEDIA_DATA, ReelItem } from "@/data/media";
@@ -8,23 +8,6 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { InstagramIcon } from "@/components/ui/BrandIcons";
 
 export function VideoShowcase() {
-  const [instagramScriptLoaded, setInstagramScriptLoaded] = useState(false);
-
-  useEffect(() => {
-    // Load Instagram embed script once globally if any item has an instagramUrl
-    if (MEDIA_DATA.reels.some((r) => r.instagramUrl)) {
-      if (!document.getElementById("instagram-embed-script")) {
-        const script = document.createElement("script");
-        script.id = "instagram-embed-script";
-        script.src = "//www.instagram.com/embed.js";
-        script.async = true;
-        script.onload = () => setInstagramScriptLoaded(true);
-        document.body.appendChild(script);
-      } else {
-        setInstagramScriptLoaded(true);
-      }
-    }
-  }, []);
 
   return (
     <section id="reels" className="py-24 relative overflow-hidden bg-slate-950/40">
@@ -35,7 +18,7 @@ export function VideoShowcase() {
             <Video className="w-4 h-4" />
             <span>{MEDIA_DATA.sectionTitle}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-100 mb-2">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--text-primary)] mb-2">
             {MEDIA_DATA.sectionSubtitle}
           </h2>
           <p className="text-slate-400 text-sm md:text-base max-w-xl">
@@ -57,13 +40,13 @@ export function VideoShowcase() {
                 <div>
                   {/* Video Slot Aspect 9:16 */}
                   <div className="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-slate-900 border border-slate-800 mb-4 flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-300">
-                    {reel.instagramUrl ? (
-                      /* Instagram Embed Blockquote */
-                      <blockquote
-                        className="instagram-media w-full h-full"
-                        data-instgrm-permalink={reel.instagramUrl}
-                        data-instgrm-version="14"
-                      />
+                    {reel.thumbnailUrl ? (
+                      <a href={reel.instagramUrl} target="_blank" rel="noopener noreferrer" className="relative w-full h-full block">
+                        <img src={reel.thumbnailUrl} alt={reel.title} className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-colors">
+                          <Play className="w-10 h-10 fill-white text-white" />
+                        </div>
+                      /</a>
                     ) : reel.videoUrl ? (
                       /* Direct Video or iFrame fallback */
                       <iframe
@@ -89,7 +72,7 @@ export function VideoShowcase() {
                   </div>
 
                   {/* Reel Info */}
-                  <h3 className="font-bold text-slate-100 text-base mb-1 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="font-bold text-[var(--text-primary)] text-base mb-1 group-hover:text-cyan-300 transition-colors">
                     {reel.title}
                   </h3>
                   <p className="text-xs text-slate-400 leading-relaxed mb-4">
@@ -119,7 +102,7 @@ export function VideoShowcase() {
             href={MEDIA_DATA.instagramProfileUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 text-xs font-mono-tech font-bold text-slate-200 px-6 py-3 rounded-xl glass-card border border-purple-500/30 hover:border-purple-500 hover:text-white transition-all shadow-md"
+            className="inline-flex items-center space-x-2 text-xs font-mono-tech font-bold text-[var(--text-secondary)] px-6 py-3 rounded-xl glass-card border border-purple-500/30 hover:border-purple-500 hover:text-white transition-all shadow-md"
           >
             <InstagramIcon className="w-4 h-4 text-purple-400" />
             <span>Follow Dr. Selvaraj on Instagram</span>
